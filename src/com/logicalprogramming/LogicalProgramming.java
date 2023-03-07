@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class LogicalProgramming {
     public static void main(String[] args) {
 
-        int num, sum = 0;
+        int num, count = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number");
         num = sc.nextInt();
 
-        for (int i = 1; i < num; i++) {
+        for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
-                sum = sum + i;
+                count++;
             }
         }
-        if (num == sum) {
-            System.out.println("perfect number");
+        if (count == 2) {
+            System.out.println("prime number");
         } else {
-            System.out.println("not a perfect number");
+            System.out.println("not a prime number");
         }
     }
 
