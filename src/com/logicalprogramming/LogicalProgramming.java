@@ -5,18 +5,22 @@ import java.util.Scanner;
 public class LogicalProgramming {
     public static void main(String[] args) {
 
-        int term, a =0, b =1 , c;
+        int num, sum = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter term");
-        term = sc.nextInt();
+        System.out.println("Enter number");
+        num = sc.nextInt();
 
-        for(int i = 1; i <= term; i++){
-            System.out.print(a + " ");
-            c = a +  b;
-            a = b;
-            b = c;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum = sum + i;
+            }
         }
-
+        if (num == sum) {
+            System.out.println("perfect number");
+        } else {
+            System.out.println("not a perfect number");
+        }
     }
+
 }
 
